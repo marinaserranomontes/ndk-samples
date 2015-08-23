@@ -1,10 +1,5 @@
 package com.android.jniexamples;
 
-import java.util.Date;
-
-/**
- * Created by mserrano on 17/08/15.
- */
 public class MessageJNI {
 
     static {

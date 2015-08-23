@@ -31,16 +31,6 @@ model {
     android.ndk {
         moduleName = "message"
     }
-
-    android.sources {
-        main {
-            jni {
-                source {
-                    srcDir 'src/main'
-                }
-            }
-        }
-    }
 }
 
 dependencies {
