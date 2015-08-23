@@ -1,0 +1,29 @@
+apply plugin: 'com.android.model.application'
+
+model {
+    android {
+        compileSdkVersion = 22
+        buildToolsVersion ="22.0.1"
+
+        defaultConfig.with {
+            applicationId = "com.android.jniexamples"
+            minSdkVersion.apiLevel      = 3
+            targetSdkVersion.apiLevel   = 22
+        }
+    }
+    android.buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles  += file('proguard-rules.txt')
+        }
+    }
+        android.ndk {
+            moduleName = "array-conversion-jni"
+            ldLibs    = ["android", "log"]
+        }
+
+        android.productFlavors {
+            // To include all cpu architectures, leaves abiFilters empty
+            create("all")
+        }
+}
